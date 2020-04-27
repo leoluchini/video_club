@@ -1,0 +1,78 @@
+AllCops:
+  DisplayCopNames: true
+
+Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: true
+  CountComments: false  # count full line comments?
+  Max: 25
+  ExcludedMethods:
+    - refine
+
+Layout/LineLength:
+  Enabled: true
+  Max: 200
+  AllowHeredoc: true
+  AllowURI: true
+  URISchemes:
+    - http
+    - https
+  IgnoreCopDirectives: false
+  IgnoredPatterns: []
+
+Style/Alias:
+  StyleGuide: '#alias-method'
+  Enabled: true
+  EnforcedStyle: prefer_alias_method
+
+Layout/ArrayAlignment:
+  StyleGuide: '#align-multiline-arrays'
+  Enabled: true
+
+Layout/HashAlignment:
+  Enabled: true
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
+  EnforcedLastArgumentHashStyle: always_inspect
+
+Style/ClassAndModuleChildren:
+  StyleGuide: '#namespace-definition'
+  SafeAutoCorrect: false
+  AutoCorrect: false
+  Enabled: true
+  EnforcedStyle: compact
+
+Style/Lambda:
+  StyleGuide: '#lambda-multi-line'
+  Enabled: true
+  EnforcedStyle: literal
+
+Style/PercentLiteralDelimiters:
+  StyleGuide: '#percent-literal-braces'
+  Enabled: true
+  PreferredDelimiters:
+    default: ()
+    "%i": "()"
+    "%I": "()"
+    "%r": "()"
+    "%w": "()"
+    "%W": "()"
+
+Style/SignalException:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+Style/SymbolArray:
+  StyleGuide: '#percent-i'
+  Enabled: true
+  EnforcedStyle: brackets
+  MinSize: 2
+
+Naming/VariableNumber:
+  Enabled: true
+  EnforcedStyle: snake_case
