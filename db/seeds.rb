@@ -7,6 +7,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+10.times { User.create(email: Faker::Internet.email) }
+
 Movie.create([
                { title: "Star Wars", plot: "Taking all six films as a single story, Star Wars tells the story of the rise and fall of one of the most powerful Jedis in history, Anakin Skywalker. Anakin's talent is disovered, he rises in the ranks of the Jedi, is misled by his own fears, corrupted by power, and redeemed by the love of his son." },
                { title: "Lord of the Rings", plot: "Frodo Baggins is a hobbit that his uncle Bilbo bears the powerful One Ring, capable of granting unlimited power to whoever possesses it, in order to destroy it. However, very powerful evil forces want to take it away from him." }

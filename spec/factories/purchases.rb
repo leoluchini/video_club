@@ -4,6 +4,7 @@ FactoryBot.define do
   factory :purchase do
     quality { "sd" }
     price { "2.99" }
+    created_at { Date.today }
     association :user, factory: :user
   end
 

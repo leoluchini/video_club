@@ -6,6 +6,11 @@ Rails.application.routes.draw do
       get :films, to: "films#index"
       get :movies, to: "movies#index"
       get :seasons, to: "seasons#index"
+
+      resources :users do
+        resources :purchase, only: [:create]
+        resources :libraries, only: [:index]
+      end
     end
   end
 end

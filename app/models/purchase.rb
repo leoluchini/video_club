@@ -10,4 +10,12 @@ class Purchase < ApplicationRecord
   validates_presence_of :price
 
   enum quality: [:hd, :sd]
+
+  def days_available
+    (created_at.to_date...created_at.to_date + 2.days).to_a
+  end
+
+  def days_remaining
+    days_available.select { |day| day >= Date.today }.count
+  end
 end
