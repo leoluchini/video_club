@@ -2,6 +2,6 @@
 
 class Api::V1::SeasonsController < ApplicationController
   def index
-    @seasons = Season.left_outer_joins(:episodes).all
+    @seasons = Season.includes(:episodes).all
   end
 end
