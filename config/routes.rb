@@ -8,7 +8,7 @@ Rails.application.routes.draw do
       get :seasons, to: "seasons#index"
 
       resources :users do
-        resources :purchase, only: [:create]
+        resources :purchases, only: [:create]
         resources :libraries, only: [:index]
       end
     end

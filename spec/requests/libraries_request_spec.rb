@@ -3,7 +3,7 @@
 require "rails_helper"
 
 RSpec.describe "Libraries", type: :request do
-  let(:user) { create(:user) }
+  let!(:user) { create(:user) }
   let!(:movies) { create_list(:purchase_movie, 5, user: user) }
   let!(:seasons) { create_list(:purchase_season, 5, user: user) }
 
